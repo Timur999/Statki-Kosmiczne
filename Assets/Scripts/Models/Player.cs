@@ -2,8 +2,9 @@
 
 namespace Assets.Scripts.Models
 {
-    class Player : Destroyable
+    public class Player : Destroyable
     {
+        public Bullet Bullet;
         //ShipMove shipMove = new ShipMove();
     }
 }

@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace Scripts.Abstracts.Classes
 {
-    class Destroyable : MonoBehaviour, ICollision
+    public class Destroyable : MonoBehaviour, ICollision
     {
         public GameObject Explosion;
 
-        public void OnTriggerEnter(Collider other)
+        public virtual void OnTriggerEnter(Collider other)
         {
             Debug.Log(gameObject.tag);
             Debug.Log(other.tag);
