@@ -4,7 +4,7 @@ namespace Scripts.Helpers
 {
     static class MoveHelper
     {
-        public static KeyCode[] PlayersDirectionKeys = new KeyCode[] { KeyCode.RightArrow, KeyCode.LeftArrow };
+        public static KeyCode[] PlayersDirectionKeys = new KeyCode[] { KeyCode.RightArrow, KeyCode.LeftArrow, KeyCode.UpArrow, KeyCode.DownArrow };
         public static KeyCode[] CameraDirectionKeys = new KeyCode[] { KeyCode.W, KeyCode.A, KeyCode.S, KeyCode.D, KeyCode.Keypad2, KeyCode.Keypad8 };
 
         public static bool ShouldChangePosition(KeyCode[] directionKeys, out KeyCode holdedKeyCode)
@@ -32,8 +32,10 @@ namespace Scripts.Helpers
                 case KeyCode.LeftArrow:
                 case KeyCode.A:
                     return Vector3.left;
+                case KeyCode.UpArrow:
                 case KeyCode.W:
                     return Vector3.forward;
+                case KeyCode.DownArrow:
                 case KeyCode.S:
                     return Vector3.back;
                 case KeyCode.Keypad2:
